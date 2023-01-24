@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="cs">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Objednávkový formulář prohlídky -Jedovnice">
+  <meta name="author" content="Daniel">
+  <title>Objednání prohlídky</title>
+  <link href="style/style.css" rel="stylesheet">
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+  <script src="https://kit.fontawesome.com/45b1f049b3.js" crossorigin="anonymous"></script>
+
+
+  <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+  <!-- Custom styles for this template -->
+  <link href="style/carousel.css" rel="stylesheet">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="images/logo.png" alt="logo-jedovnice" style="width: 35px;" class="img-fluid"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="index.html">Hlavní strana</a>
+            </li>
+
+
+
+            <li class="nav-item dropdown ">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-bs-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                O zámku
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="aboutchatetau.html">O zámku</a>
+                <a class="dropdown-item " href="exposition.html">Expozice</a>
+
+              </div>
+            </li>
+
+
+
+            <li class="nav-item">
+              <a class="nav-link " href="price.html">Ceník a otevírací doba</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="orderForm.html">Objednání prohlídky</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="actions.html">Proběhlé akce</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="contact.html">Kontakt</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <div class="container mt-5">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Hlavní strana</a></li>
+          <li class="breadcrumb-item active">Objednání prohlídky</li>
+        </ol>
+      </nav>
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center container mb-5">
+
+
+      <div class="col-md-5 col-md-offset-5">
+        <div class="row">
+          <div class="mt-2 mb-4">
+            <h2>Registrační formulář pro prohlídku</h2>
+          </div>
+        </div>
+
+        <form>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Emailová adresa</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">Nikdy nesdílíme Vaši e-mailovou adresu s nikým dalším.</div>
+          </div>
+
+          <div class="mb-3">
+            <div class="col-auto">
+              <label for="inputPassword6" class="col-form-label">Heslo objednávky</label>
+            </div>
+            <div class="col-auto">
+              <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+            </div>
+            <div class="col-auto">
+              <span id="passwordHelpInline" class="form-text">
+                Heslo musí mít minimálně 5 znaků.
+              </span>
+            </div>
+
+
+            <div class="mb-3">
+              <label for="name" class="form-label">Jméno</label>
+              <input type="text" class="form-control" id="name">
+            </div>
+            <div class="mb-3">
+              <label for="surname" class="form-label">Příjmení</label>
+              <input type="text" class="form-control " id="surname" value="" required>
+
+            </div>
+
+            <div class="mb-3">
+              <label for="date" class="form-label">Datum prohlídky</label>
+              <input type="date" class="form-control " id="date" required>
+
+            </div>
+
+          </div>
+          <div class="mb-3">
+            <label for="stat">Odkud k nám jedete</label>
+            <select class="form-select" id="stat" required>
+              <option value="0">Vyberte</option>
+              <option value="1">Česká republika</option>
+              <option value="2">Slovenská republika</option>
+              <option value="3">Rakousko</option>
+              <option value="4">Německo</option>
+              <option value="5">Anglie</option>
+              <option value="6">Francie</option>
+              <option value="7">Nizozemí</option>
+              <option value="8">Rusko</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="customRange3" class="form-label">Počet lidí</label>
+            <input type="range" class="form-range" start="1" min="1" max="10" step="1" id="customRange3"
+              aria-describedby="peopleCount">
+          </div>
+          <div style="font-size: 18px; font-style: normal;" class="col-auto">
+            <p>Počet lidí: <strong> <span id="peopleCount" class="form-text"></span></strong>
+            <p>
+              </span>
+          </div>
+
+          <script>
+            var slider = document.getElementById("customRange3");
+            var output = document.getElementById("peopleCount");
+            output.innerHTML = slider.value;
+
+            slider.oninput = function () {
+              output.innerHTML = this.value;
+            }
+          </script>
+
+          <div class="mb-3">
+            <h3 class="mb-3">Okruhy</h3>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="1" name="okruh">
+              <label class="form-check-label" for="1">
+                Prohlídkový okruh I
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="2" name="okruh">
+              <label class="form-check-label" for="2">
+                Prohlídkový okruh II
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="3" name="okruh">
+              <label class="form-check-label" for="3">
+                Zámecký park
+              </label>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <h3 class="mb-3">Jazyk prohlídky</h3>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="jazyk" id="muz">
+              <label class="form-check-label" for="muz">
+                Česky
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="jazyk" id="flexRadioDefault2">
+              <label class="form-check-label" for="flexRadioDefault2">
+                Anglicky
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="jazyk" id="flexRadioDefault3">
+              <label class="form-check-label" for="flexRadioDefault3">
+                Německy
+              </label>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="poznamka" class="form-label">Poznámka k rezervaci</label>
+            <textarea class="form-control" id="poznamka" rows="3"></textarea>
+          </div>
+
+
+          <button type="submit" class="btn btn-primary">Odeslat</button>
+        </form>
+      </div>
+
+    </div>
+
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="container mt-auto">
+    <p class="float-end"><a href="#">Návrat nahoru</a></p>
+    <p>&copy; Daniel Chlopčík &middot; 2021 </p>
+  </footer>
+  </main>
+
+
+</body>
+
+</html>
